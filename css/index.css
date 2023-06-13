@@ -54,7 +54,7 @@ input:focus{
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: #252323;
 }
@@ -177,3 +177,123 @@ input[type=number] {
     width: 125px;
 }
 
+/************************ BOOK NOW ********************/
+
+.bookNowBtn{
+    padding: 14px 50px;
+    background-color: #A03534;
+    color: #EADFDF;
+    border: none;
+    font-weight: 500;
+    border-radius: 30px;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+}
+
+.bookNowBtn:hover{
+    color: #A03534;
+    background-color: #EADFDF;
+}
+
+/***************** CAROUSEL *******************/
+
+.carousel-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.all-cards{
+    display: flex;
+    flex: 9;
+    justify-content: space-around;
+}
+
+.card{
+    width: 350px;
+    height: 374px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    font-family: inherit;
+    font-size: 30px;
+    z-index: 0;
+    transition: display 5s ease;
+    
+}
+
+.card-bg{
+    width: inherit;
+    height: inherit;
+    border-radius: 20px;
+    z-index: 1;
+    position: relative;
+    transition: filter 0.3s ease;
+}
+
+.card-content{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: display 0.3s ease;
+}
+
+.card-bg-hover{
+    filter: blur(4px);
+}
+
+.card p{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFF;
+    z-index: 2;
+}
+
+
+
+.card button{
+    position: absolute;
+    bottom: 30px;
+    font-family: inherit;
+    background-color: #F1F0F0;
+    color: #4E4B4B;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    z-index: 2;
+}
+
+.carousel-btn-container{
+    flex: 1;
+}
+
+.scroll{
+    padding: 16px 17px;
+    background-color: #A03534;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.scroll:hover{
+    background-color: #661d1c;
+}
+
+.scroll:disabled{
+    background-color: rgba(160, 53, 52,0.7);
+}
+
+.c4,.c5{
+    display: none;
+}
