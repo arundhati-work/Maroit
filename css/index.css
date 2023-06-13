@@ -12,3 +12,33 @@ body{
     background-image: url('../assets/desktop-bg.png');
     font-family: 'Raleway', sans-serif;
 }
+
+/************** NAVBAR *********************/
+
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-container, .profile-container{
+    flex:0.5;
+}
+
+.links-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 8;
+}
+
+.links-container a{
+    text-decoration: none;
+    color: #252323;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links-container a:hover{
+    color: #6f6d6d;
+}
