@@ -21,7 +21,7 @@ const leftScroll = document.querySelector('.left-scroll');
 const rightScroll = document.querySelector('.right-scroll');
 
 var leftmostCard = 0;
-var rightmostCard = 2;
+var rightmostCard = 1;
 
 leftScroll.addEventListener('click',()=>{
     leftmostCard--;
