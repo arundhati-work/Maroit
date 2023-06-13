@@ -62,8 +62,8 @@ input:focus{
 /*************** SEARCH BAR *******************/
 
 .search-container{
-    background-color: #D9D9D9;
-    width: 730px;
+    background-color: rgba(217, 217, 217,0.7);
+    width: 800px;
     height: 128px;
     border-radius: 17px;
     display: flex;
@@ -75,9 +75,9 @@ input:focus{
 }
 
 .destination-container, .dates-container, .guests-rooms-container{
+    margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    margin: 20px;
     flex: 1;
 }
 
@@ -139,6 +139,7 @@ input[type=number] {
 
 .destination-inputs input{
     font-family: inherit;
+    width: 150px;
     border: none;
     background-color: transparent;
     border-bottom: 1px solid #6f6d6d;
@@ -147,5 +148,32 @@ input[type=number] {
     padding: 10px;
 }
 
+/****************** DATES ********************/
 
+.dates-input{
+    margin: 10px 10px;
+     display: flex;
+     justify-content: space-around;
+}
+
+.from-div, .to-div{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.from-div p, .to-div p{
+    margin: 10px;
+    font-size: 10px;
+}
+
+#from, #to{
+    background-color: transparent;
+    border:none;
+    padding: 5px;
+    font-family: inherit;
+    width: 125px;
+}
 
