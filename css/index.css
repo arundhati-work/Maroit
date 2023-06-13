@@ -42,3 +42,52 @@ body{
 .links-container a:hover{
     color: #6f6d6d;
 }
+
+/*************** MAIN CONTAINER ***************/
+
+.main-container{
+    width: inherit;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #252323;
+}
+
+/*************** SEARCH BAR *******************/
+
+.search-container{
+    background-color: #D9D9D9;
+    width: 730px;
+    height: 128px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.destination-container, .dates-container{
+    border-right: 1px solid #252323;
+}
+
+.destination-container, .dates-container, .guests-rooms-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    flex: 1;
+}
+
+
+
+.headers{
+    display: flex;
+}
+
+.headers p{
+    margin-left: 10px;
+}
+
+
+
+
+
