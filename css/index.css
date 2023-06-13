@@ -13,6 +13,10 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+input:focus{
+    outline: none;
+}
+
 /************** NAVBAR *********************/
 
 .nav-container{
@@ -87,6 +91,49 @@ body{
     margin-left: 10px;
 }
 
+
+/**************** GUESTS ******************/
+
+.guests-rooms-inputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.guests, .rooms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.guests-rooms-inputs p{
+    font-size: 10px;
+}
+
+.guests-rooms-inputs input{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 20px;
+    color: #252323;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
 
