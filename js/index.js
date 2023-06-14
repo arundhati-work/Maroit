@@ -23,13 +23,9 @@ const rightScroll = document.querySelector('.right-scroll');
 var leftmostCard = 0;
 var rightmostCard = 1;
 
-console.log("Screen Width::",screen.width);
 if (screen.width < 960){
     rightmostCard = 0;
 }
-
-console.log("Leftmost card::",leftmostCard);
-console.log("Rightmost card::",rightmostCard);
 
 leftScroll.addEventListener('click',()=>{
     leftmostCard--;
@@ -87,11 +83,25 @@ cardBg.forEach((card, idx)=>{
     if (screen.width<960){
         str =  mobEffectBeg + backgrounds[idx] + effectEnd;
         card.style.backgroundImage = str;
-        console.log(str);
     }
     else{
         str = desktopEffectBeg +backgrounds[idx] + effectEnd;
         card.style.backgroundImage = str;
     }
     
+})
+
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const linksContainer = document.querySelector('.links-container');
+if (screen.width<=960){
+    hamburgerBtn.addEventListener('click',()=>{
+        linksContainer.style.display = 'flex';
+    })
+}
+
+
+const closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('click',()=>{
+    console.log("Close btn click");
+    linksContainer.style.display = 'none';
 })
