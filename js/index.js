@@ -93,15 +93,18 @@ cardBg.forEach((card, idx)=>{
 
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const linksContainer = document.querySelector('.links-container');
+const closeBtn = document.querySelector('.close-btn');
 if (screen.width<=960){
     hamburgerBtn.addEventListener('click',()=>{
         linksContainer.style.display = 'flex';
+        closeBtn.style.display = 'flex';
     })
 }
 
 
-const closeBtn = document.querySelector('.close-btn');
+
 closeBtn.addEventListener('click',()=>{
     console.log("Close btn click");
+    closeBtn.style.display = 'none';
     linksContainer.style.display = 'none';
 })
