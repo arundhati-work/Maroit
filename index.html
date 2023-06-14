@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Maroit</title>
         <link rel="stylesheet" href="./css/index.css">
     </head>
@@ -15,14 +15,21 @@
                         </a>
                     </div>
                     <div class="links-container">
+                        <div class="close-btn-container">
+                            <a href="#" class="close-btn"><img src="./assets/close-btn-white.png" alt="close"></a>
+                        </div>
                         <a href="#">Find and Reserve</a>
                         <a href="#">Vacations</a>
                         <a href="#">Events</a>
                         <a href="#">Offers</a>
                         <a href="#">About Maroit</a>
+                        <a href="#" class="signup">Login | Sign Up</a>
                     </div>
                     <div class="profile-container">
                         <a href="#"><img src="./assets/profile.png" alt="Profile"></a>
+                    </div>
+                    <div class="hamburger-container">
+                        <a href="#" class="hamburger-btn"><img src="./assets/Hamburger.png" alt="Options"></a>
                     </div>
                 </div>
             </nav>
@@ -30,6 +37,7 @@
         <main>
             <div class="main-container">
                 <div class="search-container">
+                    <div class="data-container">
                     <div class="destination-container">
                         <div class="destination-headers headers">
                             <img src="./assets/location.png" alt="Location">
@@ -79,6 +87,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="mob-book-now-container">
+                    <button class="bookNowBtnMob scroll" onclick="BookNow()"><img src="./assets/BookNowMob.png" alt="Book Now"></button>
+                </div>
                 </div>
                 <div class="button-container">
                     <button class="bookNowBtn" onclick="BookNow()">Book Now</button>

@@ -11,6 +11,7 @@ body{
     height:100vh;
     background-image: url('../assets/desktop-bg.png');
     font-family: 'Raleway', sans-serif;
+    position: fixed;
 }
 
 input:focus{
@@ -21,6 +22,7 @@ input:focus{
 
 .nav-container{
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -47,6 +49,14 @@ input:focus{
     color: #6f6d6d;
 }
 
+.hamburger-container{
+    display: none;
+}
+
+.signup{
+    display: none;
+}
+
 /*************** MAIN CONTAINER ***************/
 
 .main-container{
@@ -61,7 +71,7 @@ input:focus{
 
 /*************** SEARCH BAR *******************/
 
-.search-container{
+.data-container{
     background-color: rgba(217, 217, 217,0.7);
     width: 800px;
     height: 128px;
@@ -195,6 +205,10 @@ input[type=number] {
     background-color: #EADFDF;
 }
 
+.bookNowBtnMob{
+    display: none;
+}
+
 /***************** CAROUSEL *******************/
 
 .carousel-container{
@@ -231,7 +245,7 @@ input[type=number] {
     width: inherit;
     height: inherit;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     border-radius: 20px;
     z-index: 1;
     position: relative;
@@ -306,6 +320,15 @@ input[type=number] {
 /*************** RESPONSIVE ******************/
 
 @media screen and (max-width:960px){
+
+    /************* MAIN ******************/
+
+    body{
+        width: max-content;
+        height: max-content;
+    }
+
+    /************* CARDS ****************/
     
     .card{
         width: 98%;
@@ -314,8 +337,6 @@ input[type=number] {
     .c2{
         display: none;
     }
-
-
 
     .card-content{
         position: absolute;
@@ -332,6 +353,189 @@ input[type=number] {
 
     .card-content button{
         display: none;
+    }
+
+    /************* NAVBAR ***************/
+
+    .nav-container{
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-container img{
+        width: 200px;
+        height: auto;
+    }
+
+    .hamburger-container{
+        display: flex;
+    }
+
+    .hamburger-container img{
+        width: 20px;
+        height: auto;
+    }
+
+    .signup{
+        display: flex;
+    }
+
+    .profile-container{
+        display: none;
+    }
+
+    .nav-container{
+        z-index: 0;
+    }
+
+     .links-container{
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+         position:absolute;
+         background-color: #A03534;
+         display: none;
+         top: 0;
+         right: 0;
+        margin-left: 50%;
+    } 
+
+    .links-container a{
+        color: #FFF;
+    }
+
+    /******************* SEARCH BLOCK ****************/
+
+    .main-container{
+        height: auto;
+    }
+
+    .data-container{
+        width: max-content;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-bottom: 10px;
+    }
+
+    .destination-container, .dates-container, .guests-rooms-container{
+        border: none;
+        margin: 10px;
+    }
+
+    .destination-container, .dates-container{
+        padding: 10px;
+    }
+
+    .destination-inputs input{
+        border-bottom: 1px dashed black;
+    }
+
+    .headers p{
+        font-size: 12px;
+    }
+
+    .headers img{
+        height: 15px;
+        width: auto;
+    }
+
+    .destination-inputs input{
+        margin: none;
+        width: 70%;
+    }
+
+    #from, #to{
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .dates-input{
+        margin: 10px 10px 0 10px;
+    }
+
+    .dates-input p{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .from-div, .to-div{
+        margin: 0;
+    }
+    
+    .guests-rooms-inputs{
+        margin-top: 0;
+    }
+
+    .guests-rooms-inputs input{
+        margin-bottom: 0;
+    }
+
+    /******************* BOOK NOW *******************/
+
+    .data-container{
+        background-color: transparent;
+        
+    }
+    
+    .search-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(217, 217, 217,0.7);
+        margin-bottom: 10px;
+    }
+
+    .bookNowBtn{
+        display: none;
+    }
+
+    .bookNowBtnMob{
+        display: flex;
+        margin-left: 10px;
+    }
+
+    .bookNowBtnMob img{
+        padding: 2px;
+    }
+
+
+    /******************* CAROUSEL ********************/
+
+    .carousel-container{
+        width: 99%;
+    }
+
+    .card{
+        height: 9em;
+        
+    }
+
+    .card-bg{
+        border-radius: 7px;
+    }
+
+    .card-bg:hover{
+        filter: none;
+    }
+
+    .scroll img{
+        height: 15px;
+        width: auto;
+    }
+
+    .scroll{
+        padding: 10px 10px;
+    }
+
+    .card-content p{
+        font-size: 15px;
     }
 
     
