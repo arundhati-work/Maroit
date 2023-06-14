@@ -212,8 +212,8 @@ input[type=number] {
 }
 
 .card{
-    width: 550px;
-    height: 470px;
+    width: 80%;
+    height: 15em;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -231,6 +231,7 @@ input[type=number] {
     width: inherit;
     height: inherit;
     background-repeat: no-repeat;
+    background-size: auto;
     border-radius: 20px;
     z-index: 1;
     position: relative;
@@ -300,4 +301,38 @@ input[type=number] {
 
 .c3,.c4,.c5{
     display: none;
+}
+
+/*************** RESPONSIVE ******************/
+
+@media screen and (max-width:960px){
+    
+    .card{
+        width: 98%;
+    }
+
+    .c2{
+        display: none;
+    }
+
+
+
+    .card-content{
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        align-items: flex-start;
+        justify-content:flex-end;
+        margin-left: 10%;
+        margin-bottom: 10%;;
+        flex-direction: column;
+        display: flex;
+        transition: display 0.3s ease;
+    }
+
+    .card-content button{
+        display: none;
+    }
+
+    
 }
