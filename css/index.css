@@ -20,6 +20,10 @@ input:focus{
 
 /************** NAVBAR *********************/
 
+.close-btn{
+    display: none;
+}
+
 .nav-container{
     display: flex;
     flex-wrap:wrap;
