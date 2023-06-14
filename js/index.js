@@ -23,6 +23,14 @@ const rightScroll = document.querySelector('.right-scroll');
 var leftmostCard = 0;
 var rightmostCard = 1;
 
+console.log("Screen Width::",screen.width);
+if (screen.width < 960){
+    rightmostCard = 0;
+}
+
+console.log("Leftmost card::",leftmostCard);
+console.log("Rightmost card::",rightmostCard);
+
 leftScroll.addEventListener('click',()=>{
     leftmostCard--;
     rightmostCard--;
@@ -40,7 +48,7 @@ leftScroll.addEventListener('click',()=>{
 rightScroll.addEventListener('click',()=>{
     leftmostCard++;
     rightmostCard++;
-    if (rightmostCard==4){
+    if (rightmostCard==(cards.length-1)){
         rightScroll.disabled = true;
     }
     else{
@@ -62,3 +70,28 @@ function changeCards(){
     }
 }
 
+/*************** Adding Background Images to card-bg with javascript *************/
+
+const backgrounds = ['masaiMara.png','MoxyBrooklyn.png','ReggisKanai.png','RitzCarlton.png','TampaEdition.png'];
+
+const mobEffectBeg = "linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.7)), url('./assets/";
+const test = "url('./assets/";
+const effectEnd = "')"
+
+const desktopEffectBeg = "url('./assets/";
+var str = '';
+
+var cardBg = document.querySelectorAll('.card-bg');
+
+cardBg.forEach((card, idx)=>{
+    if (screen.width<960){
+        str =  mobEffectBeg + backgrounds[idx] + effectEnd;
+        card.style.backgroundImage = str;
+        console.log(str);
+    }
+    else{
+        str = desktopEffectBeg +backgrounds[idx] + effectEnd;
+        card.style.backgroundImage = str;
+    }
+    
+})
