@@ -44,7 +44,7 @@
                             <p>Destination</p>
                         </div>
                         <div class="destination-inputs inputs">
-                            <input type="text" list="destinations" placeholder="Hawaii, US">
+                            <input id="destinationValue" type="text" list="destinations" placeholder="Hawaii, US">
                             <datalist id="destinations">
                                 <option value="India">
                                 <option value="US">
@@ -71,6 +71,14 @@
                         </div>
 
                     </div>
+                    <div class="booking-confirmation">
+                        <p>Booking Successful!</p>
+                        <img src="./assets/green-check.png" alt="Success">
+                    </div>
+                    <div class="warning">
+                        <p>Please fill all the fields.</p>
+                        <img src="./assets/warning.png" alt="Warning">
+                    </div>
                     <div class="guests-rooms-container">
                         <div class="guests-rooms-headers headers">
                             <img src="./assets/guests.png" alt="Guests">
@@ -78,11 +86,11 @@
                         </div>
                         <div class="guests-rooms-inputs inputs">
                             <div class="guests">
-                                <input type="number" placeholder="1">
+                                <input id="guestsValue" type="number" placeholder="1">
                                 <p>Guests</p>
                             </div>
                             <div class="rooms">
-                                <input type="number" placeholder="1">
+                                <input id="roomsValue" type="number" placeholder="1">
                                 <p>Rooms</p>
                             </div>
                         </div>
@@ -93,6 +101,7 @@
                 </div>
                 </div>
                 <div class="button-container">
+                    
                     <button class="bookNowBtn" onclick="BookNow()">Book Now</button>
                 </div>
                 <div class="carousel-container">

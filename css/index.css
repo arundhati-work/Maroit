@@ -191,7 +191,43 @@ input[type=number] {
     width: 125px;
 }
 
+/******************* BOOKING CONFIRMED ********************/
+
+    .booking-confirmation, .warning{
+        display: flex;
+        width: 300px;
+        padding: 20px;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1;
+        position: absolute;
+        background-color: #f0f0f0;
+        border-radius: 7px;
+        align-self: center;
+        margin-left: 280px;
+    }
+
+    .warning{
+        border: 2px solid #E8AF41;
+        display: none;
+    }
+
+    .booking-confirmation{
+        border: 2px solid #51C256;
+        display: none;
+    }
+
+    .booking-confirmation img, .warning img{
+        height: 30px;
+        width: auto;
+    }
+
 /************************ BOOK NOW ********************/
+
+.button-container{
+    z-index: 0;
+    position: relative;
+}
 
 .bookNowBtn{
     padding: 14px 50px;
@@ -202,6 +238,7 @@ input[type=number] {
     border-radius: 30px;
     font-family: inherit;
     transition: background-color 0.3s ease;
+    z-index: 0;
 }
 
 .bookNowBtn:hover{
@@ -509,6 +546,9 @@ input[type=number] {
         padding: 2px;
     }
 
+    .booking-confirmation, .warning{
+        margin-left: 0;
+    }
 
     /******************* CAROUSEL ********************/
 
