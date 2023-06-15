@@ -1,4 +1,5 @@
 
+/*********************** CAROUSEL ************************/
 
 const cards = document.querySelectorAll('.card');
 
@@ -91,6 +92,8 @@ cardBg.forEach((card, idx)=>{
     
 })
 
+/************************* HAMBURGER ***************************/
+
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const linksContainer = document.querySelector('.links-container');
 const closeBtn = document.querySelector('.close-btn');
@@ -101,10 +104,38 @@ if (screen.width<=960){
     })
 }
 
-
-
 closeBtn.addEventListener('click',()=>{
     console.log("Close btn click");
     closeBtn.style.display = 'none';
     linksContainer.style.display = 'none';
 })
+
+/************************ BOOK NOW *******************************/
+
+var bookNowBtn = (screen.width<=960)? document.querySelector('.bookNowBtnMob') : document.querySelector('.bookNowBtn');
+const bookingConfirmation = document.querySelector('.booking-confirmation');
+const warning = document.querySelector('.warning');
+var bookNowBtn, destination, from, to, guests, rooms;
+
+bookNowBtn.addEventListener('click',()=>{
+    destination = document.querySelector('#destinationValue');
+    from = document.querySelector('#from');
+    to = document.querySelector('#to');
+    guests = document.querySelector('#guestsValue');
+    rooms = document.querySelector('#roomsValue');
+
+    if (destination.value && from.value && to.value && guests.value && rooms.value){
+            bookingConfirmation.style.display = 'flex';
+
+        setTimeout(()=>{
+            bookingConfirmation.style.display = 'none';
+        },3000);
+    }
+    else{  
+        warning.style.display = 'flex';
+        setTimeout(()=>{
+            warning.style.display = 'none';
+        },3000);
+    }
+})
+
